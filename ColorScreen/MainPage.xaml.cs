@@ -114,5 +114,15 @@ namespace ColorScreen
                 FullScreenMode = false;
             }
         }
+
+        private void About_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            new ContentDialog
+            {
+                Content = "Legal Information: The Icon \"pantone\" is made by Roundicons from www.flaticon.com",
+                CloseButtonText = "Close",
+                DefaultButton = ContentDialogButton.Close
+            }.ShowAsync(ContentDialogPlacement.Popup);
+        }
     }
 }

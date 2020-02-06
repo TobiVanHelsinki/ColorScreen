@@ -10,7 +10,7 @@
     <Identity
     Name="ColorScreen"
     Publisher="CN=ImperiSoft, O=Tobi van Helsinki, C=DE"
-    Version="1.0.2.0" />
+    Version="1.0.10.0" />
 
   <mp:PhoneIdentity PhoneProductId="0b1312b0-a7b1-443b-b7d2-d6c5512607e5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -50,8 +50,4 @@
       </uap:VisualElements>
     </Application>
   </Applications>
-
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>

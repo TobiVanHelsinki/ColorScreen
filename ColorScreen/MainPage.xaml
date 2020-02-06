@@ -14,6 +14,7 @@
     <Page.ContextFlyout>
         <MenuFlyout x:Name="FlyOut">
             <MenuFlyoutItem Text="Reset" Click="Reset_Click"/>
+            <MenuFlyoutItem Text="About" Click="About_Click"/>
         </MenuFlyout>
     </Page.ContextFlyout>
     <Grid Background="Transparent"/>
