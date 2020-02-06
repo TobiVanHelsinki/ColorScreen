@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="ColorScreen.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Tapped="Page_Tapped"
+    RightTapped="Page_RightTapped"
+    DoubleTapped="Page_DoubleTapped"
+    IsDoubleTapEnabled="True"
+>
+    <Page.ContextFlyout>
+        <MenuFlyout x:Name="FlyOut">
+            <MenuFlyoutItem Text="Reset" Click="Reset_Click"/>
+        </MenuFlyout>
+    </Page.ContextFlyout>
+    <Grid Background="Transparent"/>
+</Page>
