@@ -10,6 +10,7 @@ this is quite hard, as Microsoft has removed the sideloading for this old apps. 
 
 # State of development
 TBH, not good. This is pure-fun project and after MS let the UWP dying ☠️, I have little to no interest in continuing this work. besides that, disabling a screen by hardware buttons saves more power. 🌲
+Besides that, the app is working perfectly fine and makes fun. If you have any comments, feel free to open an issue.
 
 # Why - but in the first place
 Back then I had a Surface Book and two external displays. Whenever I disable them, windows got totally confused and it was a mess.
