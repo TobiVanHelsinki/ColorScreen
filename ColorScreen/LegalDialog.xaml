@@ -1,0 +1,20 @@
+﻿<ContentDialog
+    x:Class="ColorScreen.LegalDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ColorScreen"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Legal Information"
+    PrimaryButtonText="Close"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick">
+
+    <StackPanel>
+        <TextBlock Text="This App displays simple a color" Margin="0,0,0,5"/>
+        <HyperlinkButton Content="See the Project Page at github" Click="HyperlinkButton_Click" CommandParameter="https://github.com/TobiVanHelsinki/ColorScreen"/>
+        <TextBlock Text="The Icon &quot;pantone&quot; is made by Roundicons from www.flaticon.com"/>
+        <HyperlinkButton Content="Farbe Icons erstellt von Roundicons - Flaticon" Click="HyperlinkButton_Click" CommandParameter="https://www.flaticon.com/de/kostenlose-icons/farbe"/>
+    </StackPanel>
+
+</ContentDialog>

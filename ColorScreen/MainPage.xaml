@@ -13,8 +13,16 @@
 >
     <Page.ContextFlyout>
         <MenuFlyout x:Name="FlyOut">
-            <MenuFlyoutItem Text="Reset" Click="Reset_Click"/>
-            <MenuFlyoutItem Text="About" Click="About_Click"/>
+            <MenuFlyoutItem Text="Reset" Click="Reset_Click">
+            <MenuFlyoutItem.Icon>
+                <SymbolIcon Symbol="Refresh"/>
+            </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
+            <MenuFlyoutItem Text="About" Click="About_Click">
+                <MenuFlyoutItem.Icon>
+                    <SymbolIcon Symbol="ContactInfo"/>
+                </MenuFlyoutItem.Icon>
+            </MenuFlyoutItem>
         </MenuFlyout>
     </Page.ContextFlyout>
     <Grid Background="Transparent"/>

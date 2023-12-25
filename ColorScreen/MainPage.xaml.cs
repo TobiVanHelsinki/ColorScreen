@@ -24,7 +24,7 @@ namespace ColorScreen
             InitializeComponent();
             var propertyInfo = typeof(Colors).GetRuntimeProperties();
             var enumerable = propertyInfo.Where(x => x.PropertyType == typeof(Color)).ToList();
-            AllColorsName = from x in enumerable let colorval = x.GetValue(null, null) let iscolor = colorval is Color where iscolor select((Color)colorval, x.Name);
+            AllColorsName = from x in enumerable let colorval = x.GetValue(null, null) let iscolor = colorval is Color where iscolor select ((Color)colorval, x.Name);
             AllColors = enumerable.Select(x => x.GetValue(null, null)).OfType<Color>().ToList();
             AllColorsEnum = AllColors.GetEnumerator();
             Background = new SolidColorBrush(Colors.Black);
@@ -33,7 +33,7 @@ namespace ColorScreen
             {
                 foreach (var item in AllColorsName)
                 {
-                    var item1 = new MenuFlyoutItem() { Text = item.Item2, Tag = item.Item1 };
+                    var item1 = new MenuFlyoutItem() { Text = item.Item2, Tag = item.Item1, Background = new SolidColorBrush(item.Item1) };
                     item1.Click += SetColor_Click;
                     fl.Items.Add(item1);
                 }
@@ -61,7 +61,8 @@ namespace ColorScreen
 
         private Color? Complementary(Color col1, Color col2)
         {
-            return new Color() {
+            return new Color()
+            {
                 A = (byte)Math.Abs(col1.A - col2.A),
                 R = (byte)Math.Abs(col1.R - col2.R),
                 G = (byte)Math.Abs(col1.G - col2.G),
@@ -71,14 +72,23 @@ namespace ColorScreen
 
         private void Page_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            if (AllColorsEnum.MoveNext())
+            if (!FullScreenMode)
             {
-                SetColor(AllColorsEnum.Current);
+                FullScreenMode = ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
             }
             else
             {
-                AllColorsEnum = AllColors.GetEnumerator();
+                ApplicationView.GetForCurrentView().ExitFullScreenMode();
+                FullScreenMode = false;
             }
+            //if (AllColorsEnum.MoveNext())
+            //{
+            //    SetColor(AllColorsEnum.Current);
+            //}
+            //else
+            //{
+            //    AllColorsEnum = AllColors.GetEnumerator();
+            //}
         }
 
         private void Page_RightTapped(object sender, RightTappedRoutedEventArgs e)
@@ -104,24 +114,21 @@ namespace ColorScreen
 
         private void Page_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            if (!FullScreenMode)
-            {
-                FullScreenMode = ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
-            }
-            else
-            {
-                ApplicationView.GetForCurrentView().ExitFullScreenMode();
-                FullScreenMode = false;
-            }
+            //if (!FullScreenMode)
+            //{
+            //    FullScreenMode = ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+            //}
+            //else
+            //{
+            //    ApplicationView.GetForCurrentView().ExitFullScreenMode();
+            //    FullScreenMode = false;
+            //}
         }
 
         private void About_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            new ContentDialog
+            _ = new LegalDialog
             {
-                Content = "Legal Information: The Icon \"pantone\" is made by Roundicons from www.flaticon.com",
-                CloseButtonText = "Close",
-                DefaultButton = ContentDialogButton.Close
             }.ShowAsync(ContentDialogPlacement.Popup);
         }
     }
