@@ -6,7 +6,8 @@ Turning off some monitors while watching a movie on one screen is not cool enoug
 start it, do right click for color-choosing and left-click to toggle full screen.
 
 # Install
-this is quite hard, as Microsoft has removed the sideloading for this old apps. However, there is a MS Store Version.
+1) Sideloading the releasae from [github](https://github.com/TobiVanHelsinki/ColorScreen/releases). you must import the given certificate in your root store for that.
+1) Use the [Microsoft Store](https://www.microsoft.com/store/apps/9N6J7S70HJSW)
 
 # State of development
 TBH, not good. This is pure-fun project and after MS let the UWP dying ☠️, I have little to no interest in continuing this work. besides that, disabling a screen by hardware buttons saves more power. 🌲
