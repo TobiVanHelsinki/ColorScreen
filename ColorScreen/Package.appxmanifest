@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap mp">
 
     <Identity
-    Name="ColorScreen"
-    Publisher="CN=ImperiSoft Software, O=ImperiSoft, C=DE"
-    Version="1.0.10.0" />
+    Name="21863TobivanHelsinki.RawColorScreen"
+    Publisher="CN=D02849C2-745B-495E-891A-5F7C07581158"
+    Version="1.0.16.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0b1312b0-a7b1-443b-b7d2-d6c5512607e5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="564bc71e-d8b3-4bb7-be7a-a1921eb71093" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>ColorScreen</DisplayName>
-    <PublisherDisplayName>TobiVanHelsinki</PublisherDisplayName>
+    <DisplayName>RawColorScreen</DisplayName>
+    <PublisherDisplayName>Tobi van Helsinki</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -34,10 +34,10 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="ColorScreen.App">
       <uap:VisualElements
-        DisplayName="ColorScreen"
+        DisplayName="RawColorScreen"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="ColorScreen"
+        Description="You have a multi-monitor-windows-setup? 🖥️💻🖥️ Turning off some monitors while watching a movie on one screen is not cool enough? Then this UWP App is the right one for you! It displays pure black (or any other color) at full screen! (yes, it does not do more)"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png" ShortName="ColorScreen">
           <uap:ShowNameOnTiles>
@@ -47,6 +47,11 @@
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="portraitFlipped"/>
+          <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
